@@ -3,4 +3,8 @@ export default {
         src: '/',
         public: '/',
     },
+    buildOptions:{
+        out:'docs'
+    }
+
 };
