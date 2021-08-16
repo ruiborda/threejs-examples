@@ -1,0 +1,29 @@
+{
+  "name": "threejs-examples",
+  "version": "1.0.0",
+  "description": "threejs examples",
+  "main": "index.js",
+  "dependencies": {
+    "three": "^0.131.3"
+  },
+  "devDependencies": {
+    "snowpack": "^3.8.6"
+  },
+  "scripts": {
+    "start": "snowpack dev",
+    "build": "snowpack build"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ruiborda/threejs-examples.git"
+  },
+  "keywords": [
+    "threejs"
+  ],
+  "author": "ruiborda",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ruiborda/threejs-examples/issues"
+  },
+  "homepage": "https://github.com/ruiborda/threejs-examples#readme"
+}
