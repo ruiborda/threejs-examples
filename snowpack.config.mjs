@@ -4,7 +4,7 @@ export default {
         public: '/',
     },
     buildOptions:{
-        out:'docs'
+        out:'docs',
+        metaUrlPath:'snowpack'
     }
-
 };
