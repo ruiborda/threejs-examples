@@ -28,7 +28,7 @@ document.body.appendChild(renderer.domElement)
 
 const geometry = new THREE.SphereGeometry(500, 64, 64);
 const material = new THREE.MeshBasicMaterial({
-    color: 0xffffff,
+    color: 0xfffff,
     map: THREE.ImageUtils.loadTexture(surface_texture),
     transparent: false
 })
