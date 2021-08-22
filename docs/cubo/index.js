@@ -10,7 +10,6 @@ import {
     TextureLoader
 } from "../snowpack/pkg/three.js";
 import fondourl from './fondo.jpg.proxy.js'
-
 const scene = new Scene();
 scene.background = new Color("skyblue");
 scene.fog = new Fog(0x76456c, 0, 8);
@@ -31,7 +30,7 @@ const material = new MeshBasicMaterial({color: 0x00ff00});
 const cube = new Mesh(geometry, material);
 scene.add(cube);
 
-camera.position.z = 3;
+camera.position.z = 4;
 
 var animate = function () {
     window.requestAnimationFrame(animate);

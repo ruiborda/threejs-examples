@@ -1,0 +1,1 @@
+export default "/orbitcontrols/earth_surface.jpg";
