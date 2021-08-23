@@ -3,6 +3,9 @@ import {OrbitControls} from "../snowpack/pkg/three/examples/jsm/controls/OrbitCo
 import {earth as tierra} from "./src/objects/earth.js";
 import {markPosition} from "./src/objects/markPosition.js";
 import starsTextureIMG from './stars.jpg.proxy.js'
+//sweetalert2
+import Swal from "../snowpack/pkg/sweetalert2.js";
+import '../snowpack/pkg/sweetalert2/dist/sweetalert2.min.css.proxy.js';
 
 const starsTexture = new THREE.TextureLoader().load(starsTextureIMG)
 const raycaster = new THREE.Raycaster();
@@ -27,6 +30,11 @@ function onMouseMove(event) {
         let [lat, lng] = vector3ToLatLng(intersects[i].point)
         document.getElementById('lat').value = lat
         document.getElementById('lng').value = lng
+        Swal.fire({
+            title: `lat: ${lat} lng:${lng}`,
+            showConfirmButton: false,
+            timer: 1500
+        })
     }
 }
 
