@@ -27,6 +27,9 @@ function onMouseMove(event) {
         markPosition.position.x = intersects[i].point.x
         markPosition.position.y = intersects[i].point.y
         markPosition.position.z = intersects[i].point.z
+        camera.position.x = intersects[i].point.x*2
+        camera.position.y = intersects[i].point.y*2
+        camera.position.z = intersects[i].point.z*2
         let [lat, lng] = vector3ToLatLng(intersects[i].point)
         document.getElementById('lat').value = lat
         document.getElementById('lng').value = lng
@@ -53,13 +56,13 @@ scene.add(tierra);
 scene.add(markPosition)
 const camera = new THREE.PerspectiveCamera(75, window.innerWidth / window.innerHeight, 0.1, 1000);
 camera.position.z = 1000;
-
 const controls = new OrbitControls(camera, renderer.domElement)
 controls.minDistance = 560
 controls.maxDistance = 1200
 controls.listenToKeyEvents(window)
 controls.screenSpacePanning = false
 controls.enablePan = false
+
 window.addEventListener('resize', () => {
     camera.aspect = window.innerWidth / window.innerHeight
     camera.updateProjectionMatrix()
@@ -99,6 +102,7 @@ function setMarkPositionFromLatLonRad(lat, lon, rad = 500) {
     markPosition.position.x = v3.x
     markPosition.position.y = v3.y
     markPosition.position.z = v3.z
+
 }
 
 setPosition.addEventListener('click', function () {
