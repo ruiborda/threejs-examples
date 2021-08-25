@@ -9,7 +9,8 @@ import {
     Fog,
     TextureLoader
 } from "three";
-import fondourl from './fondo.jpg'
+
+const fondourl = './fondo.jpg'
 const scene = new Scene();
 scene.background = new Color("skyblue");
 scene.fog = new Fog(0x76456c, 0, 8);
@@ -20,7 +21,7 @@ const camera = new PerspectiveCamera(
 );
 const loader = new TextureLoader()
 loader.load(fondourl, function (texture) {
-    scene.background=texture
+    scene.background = texture
 });
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);

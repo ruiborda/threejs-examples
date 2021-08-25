@@ -1,1 +1,0 @@
-export default "/orbitcontrols/stars.jpg";

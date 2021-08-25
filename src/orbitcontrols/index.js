@@ -2,12 +2,14 @@ import * as THREE from 'three'
 import {OrbitControls} from "three/examples/jsm/controls/OrbitControls"
 import {earth as tierra} from "./src/objects/earth";
 import {markPosition} from "./src/objects/markPosition";
-import starsTextureIMG from './stars.jpg'
+
 //sweetalert2
 import Swal from "sweetalert2";
 import 'sweetalert2/dist/sweetalert2.min.css';
 
 const starsTexture = new THREE.TextureLoader().load(starsTextureIMG)
+
+const starsTextureIMG = './stars.jpg'
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const position = new THREE.Spherical();
@@ -27,9 +29,9 @@ function onMouseMove(event) {
         markPosition.position.x = intersects[i].point.x
         markPosition.position.y = intersects[i].point.y
         markPosition.position.z = intersects[i].point.z
-        camera.position.x = intersects[i].point.x*2
-        camera.position.y = intersects[i].point.y*2
-        camera.position.z = intersects[i].point.z*2
+        camera.position.x = intersects[i].point.x * 2
+        camera.position.y = intersects[i].point.y * 2
+        camera.position.z = intersects[i].point.z * 2
         let [lat, lng] = vector3ToLatLng(intersects[i].point)
         document.getElementById('lat').value = lat
         document.getElementById('lng').value = lng

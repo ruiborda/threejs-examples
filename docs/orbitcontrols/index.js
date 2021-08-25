@@ -2,12 +2,14 @@ import * as THREE from '../snowpack/pkg/three.js'
 import {OrbitControls} from "../snowpack/pkg/three/examples/jsm/controls/OrbitControls.js"
 import {earth as tierra} from "./src/objects/earth.js";
 import {markPosition} from "./src/objects/markPosition.js";
-import starsTextureIMG from './stars.jpg.proxy.js'
+
 //sweetalert2
 import Swal from "../snowpack/pkg/sweetalert2.js";
 import '../snowpack/pkg/sweetalert2/dist/sweetalert2.min.css.proxy.js';
 
 const starsTexture = new THREE.TextureLoader().load(starsTextureIMG)
+
+const starsTextureIMG = './stars.jpg'
 const raycaster = new THREE.Raycaster();
 const mouse = new THREE.Vector2();
 const position = new THREE.Spherical();
@@ -27,9 +29,9 @@ function onMouseMove(event) {
         markPosition.position.x = intersects[i].point.x
         markPosition.position.y = intersects[i].point.y
         markPosition.position.z = intersects[i].point.z
-        camera.position.x = intersects[i].point.x*2
-        camera.position.y = intersects[i].point.y*2
-        camera.position.z = intersects[i].point.z*2
+        camera.position.x = intersects[i].point.x * 2
+        camera.position.y = intersects[i].point.y * 2
+        camera.position.z = intersects[i].point.z * 2
         let [lat, lng] = vector3ToLatLng(intersects[i].point)
         document.getElementById('lat').value = lat
         document.getElementById('lng').value = lng
