@@ -1,1 +1,1 @@
-export default "./earth.png";
+export default "/orbitcontrols/earth.png";

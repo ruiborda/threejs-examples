@@ -1,1 +1,1 @@
-export default "./stars.jpg";
+export default "/orbitcontrols/stars.jpg";
