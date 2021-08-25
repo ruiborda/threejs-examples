@@ -17,8 +17,6 @@ import {plane} from "./objects/plane.js";
 import {OrbitControls} from "../snowpack/pkg/three/examples/jsm/controls/OrbitControls.js";
 import {sphere} from "./objects/sphere.js";
 
-const fondourl = './fondo.jpg'
-
 const axis = new AxisHelper()
 const scene = new Scene();
 const renderer = new WebGLRenderer();
@@ -33,9 +31,7 @@ scene.add(axis)
 scene.add(sphere)
 //scene.fog = new Fog(0x76456c, 0, 10);
 scene.background = new Color("skyblue");
-loader.load(fondourl, function (texture) {
-    scene.background = texture
-});
+
 renderer.setSize(window.innerWidth, window.innerHeight);
 document.body.appendChild(renderer.domElement);
 
