@@ -1,7 +1,7 @@
 export default {
     mount: {
         src: '/',
-        public: {url: '/', static: false, resolve: true},
+        public: '/public/',
     },
     buildOptions:{
         out:'docs',
